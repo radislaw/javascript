@@ -2,17 +2,17 @@
 
 *Самый разумный подход в React и JSX*
 
-## Table of Contents
+## Содержание
 
   1. [Основные правила](#basic-rules)
-  1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
+  1. [Class против `React.createClass` против stateless](#class-vs-reactcreateclass-vs-stateless)
   1. [Именование](#naming)
-  1. [Declaration](#declaration)
-  1. [Alignment](#alignment)
+  1. [Объявление](#declaration)
+  1. [Выравнивание](#alignment)
   1. [Кавычки](#quotes)
   1. [Spacing](#spacing)
   1. [Props](#props)
-  1. [Parentheses](#parentheses)
+  1. [Скобки](#parentheses)
   1. [Tags](#tags)
   1. [Methods](#methods)
   1. [Очередность](#ordering)
@@ -25,7 +25,7 @@
   - Всегда используйте синтаксис JSX.
   - Не используйте `React.createElement` unless you're initializing the app from a file that is not JSX.
 
-## Class vs `React.createClass` vs stateless
+## Class против `React.createClass` против stateless
 
   - If you have internal state and/or refs, prefer `class extends React.Component` over `React.createClass` unless you have a very хорошо reason to Используйте mixins. eslint: [`react/prefer-es6-class`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md) [`react/prefer-stateless-function`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
 
@@ -103,7 +103,7 @@
 
 ## Declaration
 
-  - Do not Используйте `displayName` for naming components. Instead, name the component by reference.
+  - Не спользуйте `displayName` для именования компонентов. Вместо этого, name the component by reference.
 
     ```jsx
     // плохо
@@ -117,9 +117,9 @@
     }
     ```
 
-## Alignment
+## Выравнивание
 
-  - Follow these alignment styles for JSX syntax. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
+  - Следуйте этому стилю выравнивания для синтаксиса JSX. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
 
     ```jsx
     // плохо
@@ -149,7 +149,7 @@
   - Всегда используйте двойные кавычки (`"`) для аттрибутов JSX, и одинарные кавычки для всего прочего JS. eslint: [`jsx-quotes`](http://eslint.org/docs/rules/jsx-quotes)
 
   > Почему? JSX attributes [can't contain escaped quotes](http://eslint.org/docs/rules/jsx-quotes), so double quotes make conjunctions like `"don't"` easier to type.
-  > Regular HTML attributes also typically Используйте double quotes instead of single, so JSX attributes mirror this convention.
+  > Обычные аттрибуты HTML, как правило используют двойные кавычки вместо одинарных, так что атрибуты JSX отражают это стоглашение.
 
     ```jsx
     // плохо
@@ -299,9 +299,9 @@
   )}
   ```
 
-## Parentheses
+## Скобки
 
-  - Wrap JSX tags in parentheses when they span more than one line. eslint: [`react/wrap-multilines`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md)
+  - Оборачивайте теги JSX в Скобки when they span more than one line. eslint: [`react/wrap-multilines`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md)
 
     ```jsx
     // плохо
