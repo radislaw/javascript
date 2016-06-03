@@ -10,11 +10,11 @@
   1. [Объявление](#declaration)
   1. [Выравнивание](#alignment)
   1. [Кавычки](#quotes)
-  1. [Spacing](#spacing)
+  1. [Отступы](#spacing)
   1. [Props](#props)
   1. [Скобки](#parentheses)
-  1. [Tags](#tags)
-  1. [Methods](#methods)
+  1. [Теги](#tags)
+  1. [Методы](#methods)
   1. [Очередность](#ordering)
   1. [`isMounted`](#ismounted)
 
@@ -23,11 +23,11 @@
   - Включайте только один компонент React на файл.
     - Однако, multiple [Stateless, or Pure, Components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) are allowed per file. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless).
   - Всегда используйте синтаксис JSX.
-  - Не используйте `React.createElement` unless you're initializing the app from a file that is not JSX.
+  - Не используйте `React.createElement` unless you're initializing the app из файла не являющимся JSX.
 
 ## Class против `React.createClass` против stateless
 
-  - If you have internal state and/or refs, prefer `class extends React.Component` over `React.createClass` unless you have a very хорошо reason to Используйте mixins. eslint: [`react/prefer-es6-class`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md) [`react/prefer-stateless-function`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
+  - Если у вас имеется внутренние state и/или refs, предпочтительно использовать `class extends React.Component` вместо `React.createClass` до тех пор пока у вас не появится веская причина для использования миксинов. eslint: [`react/prefer-es6-class`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md) [`react/prefer-stateless-function`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
 
     ```jsx
     // плохо
@@ -165,7 +165,7 @@
     <Foo style={{ left: '20px' }} />
     ```
 
-## Spacing
+## Отступы
 
   - Always include a single space in your self-closing tag.
 
@@ -226,7 +226,7 @@
     />
     ```
 
-  - Always include an `alt` prop on `<img>` tags. If the image is presentational, `alt` can be an empty string or the `<img>` must have `role="presentation"`. eslint: [`jsx-a11y/img-has-alt`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md)
+  - Always include an `alt` prop on `<img>` Теги. If the image is presentational, `alt` can be an empty string or the `<img>` must have `role="presentation"`. eslint: [`jsx-a11y/img-has-alt`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md)
 
     ```jsx
     // плохо
@@ -327,9 +327,9 @@
     }
     ```
 
-## Tags
+## Теги
 
-  - Always self-close tags that have no children. eslint: [`react/self-closing-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
+  - Always self-close Теги that have no children. eslint: [`react/self-closing-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
 
     ```jsx
     // плохо
@@ -354,7 +354,7 @@
     />
     ```
 
-## Methods
+## Методы
 
   - Используйте arrow functions to close over local variables.
 
@@ -407,7 +407,7 @@
     }
     ```
 
-  - Do not Используйте underscore prefix for internal methods of a React component.
+  - Do not Используйте underscore prefix for internal Методы of a React component.
 
     ```jsx
     // плохо
@@ -429,7 +429,7 @@
     }
     ```
 
-  - Be sure to return a value in your `render` methods. eslint: [`require-render-return`](https://github.com/yannickcr/eslint-plugin-react/pull/502)
+  - Be sure to return a value in your `render` Методы. eslint: [`require-render-return`](https://github.com/yannickcr/eslint-plugin-react/pull/502)
 
     ```jsx
     // плохо
@@ -447,7 +447,7 @@
 
   - Ordering for `class extends React.Component`:
 
-  1. optional `static` methods
+  1. optional `static` Методы
   1. `constructor`
   1. `getChildContext`
   1. `componentWillMount`
@@ -458,8 +458,8 @@
   1. `componentDidUpdate`
   1. `componentWillUnmount`
   1. *clickHandlers or eventHandlers* like `onClickSubmit()` or `onChangeDescription()`
-  1. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
-  1. *Optional render methods* like `renderNavigation()` or `renderProfilePicture()`
+  1. *getter Методы for `render`* like `getSelectReason()` or `getFooterContent()`
+  1. *Optional render Методы* like `renderNavigation()` or `renderProfilePicture()`
   1. `render`
 
   - How to define `propTypes`, `defaultProps`, `contextTypes`, etc...
@@ -513,8 +513,8 @@
   1. `componentDidUpdate`
   1. `componentWillUnmount`
   1. *clickHandlers or eventHandlers* like `onClickSubmit()` or `onChangeDescription()`
-  1. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
-  1. *Optional render methods* like `renderNavigation()` or `renderProfilePicture()`
+  1. *getter Методы for `render`* like `getSelectReason()` or `getFooterContent()`
+  1. *Optional render Методы* like `renderNavigation()` or `renderProfilePicture()`
   1. `render`
 
 ## `isMounted`
